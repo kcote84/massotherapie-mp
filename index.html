@@ -1,148 +1,317 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!doctype html>
+<html lang="fr-CA" class="no-js">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Massothérapie MP | Thérapeutique & Athlétique</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Massothérapie thérapeutique et athlétique avec Michael Picard à Rivière-du-Loup.">
+  <meta name="theme-color" content="#172B44">
+  <title>Massothérapie Michael Picard | Rivière-du-Loup</title>
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header>
-    <div class="container">
-      <nav>
-        <a class="brand" href="#top">
-          <img src="assets/logo.jpg" alt="Logo Massothérapie MP" />
-          <div>Massothérapie <span>MP</span></div>
-        </a>
-        <div class="nav-links">
-          <a href="#services">Services</a>
-          <a href="#sportif">Sportif</a>
-          <a href="#tarifs">Tarifs</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contact">Contact</a>
-        </div>
 
+<body>
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
+
+  <div class="intro" aria-hidden="true">
+    <div class="intro__line intro__line--top"></div>
+    <div class="intro__mark">
+      <img src="assets/hd8.png" alt="" width="3000" height="1400">
+    </div>
+    <p>Thérapeutique <span></span> Athlétique</p>
+    <div class="intro__line intro__line--bottom"></div>
+  </div>
+
+  <header class="site-header" data-header>
+    <div class="shell header__inner">
+      <a class="brand" href="#accueil" aria-label="Massothérapie Michael Picard — Accueil">
+        <span class="brand__mark" aria-hidden="true">
+          <img src="assets/hd8.png" alt="" width="3000" height="1400">
+        </span>
+        <span class="brand__type">
+          <strong>Michael Picard</strong>
+          <small>Massothérapie</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+        <span class="sr-only">Ouvrir le menu</span>
+        <span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="site-menu" aria-label="Navigation principale">
+        <a href="#accueil">Accueil</a>
+        <a href="#michael">Michael</a>
+        <a href="#approche">Approche</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#acces">Nous trouver</a>
       </nav>
+
+      <div class="booking booking--nav">
+        <button class="button button--gold button--compact" type="button" disabled aria-disabled="true">
+          Réserver
+        </button>
+        <span class="booking__note">Bientôt disponible</span>
+      </div>
     </div>
   </header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="reveal-left">
-          <div class="eyebrow">Thérapeutique • Athlétique • Récupération</div>
-          <h1>Récupérer mieux. <span>Performer plus fort.</span></h1>
-          <p class="lead">Massothérapie sportive et thérapeutique pour athlètes, travailleurs actifs et personnes qui veulent bouger sans traîner leurs tensions comme un vieux sac de hockey.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">Prendre rendez-vous</a>
-            <a class="btn btn-ghost" href="#services">Voir les services</a>
-          </div>
-        </div>
-        <div class="hero-card reveal-right">
-          <img src="assets/sportif.png" alt="Sportif en récupération après entraînement" />
-          <div class="metric-box">
-            <div class="metric"><strong>60</strong><small>minutes ciblées</small></div>
-            <div class="metric"><strong>90</strong><small>minutes profondes</small></div>
-            <div class="metric"><strong>100%</strong><small>adapté à ton corps</small></div>
-          </div>
-        </div>
-      </div>
-    </section>
+  <main id="main-content">
+    <section class="hero" id="accueil" aria-labelledby="hero-title">
+      <div class="hero__orbit hero__orbit--one" aria-hidden="true"></div>
+      <div class="hero__orbit hero__orbit--two" aria-hidden="true"></div>
+      <div class="hero__trace" aria-hidden="true"></div>
 
-    <section id="services">
-      <div class="container">
-        <div class="section-title reveal-left">
-          <h2>Services offerts</h2>
-          <p>Des soins orientés résultats, autant pour la performance sportive que pour le relâchement des tensions du quotidien.</p>
-        </div>
-        <div class="cards">
-          <article class="card reveal-left"><div class="icon">🏋️</div><h3>Massage sportif</h3><p>Préparation, récupération, entretien musculaire et relâchement des zones surchargées après l’entraînement.</p></article>
-          <article class="card reveal-zoom"><div class="icon">🎯</div><h3>Thérapeutique ciblé</h3><p>Approche précise pour tensions au dos, cou, épaules, jambes et inconforts liés au travail ou au sport.</p></article>
-          <article class="card reveal-right"><div class="icon">🌿</div><h3>Relaxation</h3><p>Massage plus doux, ambiance calme et détente complète pour décrocher du stress et récupérer mentalement.</p></article>
-        </div>
-      </div>
-    </section>
+      <div class="shell hero__grid">
+        <div class="hero__copy">
+          <p class="kicker reveal" data-reveal>Massothérapie Michael Picard</p>
+          <h1 id="hero-title" class="hero__title" aria-label="Bouger mieux. Récupérer plus fort.">
+            <span class="title-mask"><span>Bouger mieux.</span></span>
+            <span class="title-mask title-mask--gold"><span>Récupérer</span></span>
+            <span class="title-mask title-mask--offset"><span>plus fort.</span></span>
+          </h1>
+          <p class="hero__lead reveal" data-reveal>
+            Une approche thérapeutique et athlétique adaptée à votre corps, votre rythme et vos objectifs.
+          </p>
+          <p class="hero__location reveal" data-reveal>
+            <span aria-hidden="true"></span>
+            Massothérapie thérapeutique et athlétique à Rivière-du-Loup
+          </p>
 
-    <section id="sportif">
-      <div class="container split">
-        <div class="reveal-left">
-          <img src="assets/massage.png" alt="Massage relaxation et bien-être" />
-        </div>
-        <div class="reveal-right">
-          <div class="section-title">
-            <h2>Une approche sérieuse, sans flafla.</h2>
-            <p>Chaque séance est ajustée selon ton niveau d’activité, tes douleurs, tes objectifs et ton seuil de pression.</p>
+          <div class="hero__actions reveal" data-reveal>
+            <div class="booking">
+              <button class="button button--gold" type="button" disabled aria-disabled="true">
+                Réserver une séance
+              </button>
+              <span class="booking__note">Réservation en ligne bientôt disponible</span>
+            </div>
+            <a class="text-link" href="#michael">Découvrir Michael <span aria-hidden="true">↘</span></a>
           </div>
-          <div class="checklist">
-            <div class="check"><b>✓</b><span>Évaluation rapide avant le soin.</span></div>
-            <div class="check"><b>✓</b><span>Pression adaptée : détente, profond ou sportif.</span></div>
-            <div class="check"><b>✓</b><span>Conseils simples pour mieux récupérer entre les rendez-vous.</span></div>
-            <div class="check"><b>✓</b><span>Reçus disponibles pour assurances.</span></div>
+        </div>
+
+        <div class="hero__portrait-wrap reveal" data-reveal data-parallax>
+          <div class="hero__number" aria-hidden="true">MP</div>
+          <div class="hero__portrait">
+            <img
+              src="assets/ChatGPT Image 12 juill. 2026, 07 h 28 min 50 s.png"
+              alt="Portrait professionnel de Michael Picard"
+              width="730"
+              height="754"
+              fetchpriority="high"
+            >
+          </div>
+          <div class="hero__caption">
+            <strong>Michael Picard</strong>
+            <span>Thérapeutique &amp; athlétique</span>
           </div>
         </div>
       </div>
+
+      <a class="scroll-cue" href="#michael" aria-label="Faire défiler jusqu'à la présentation de Michael">
+        <span>Explorer</span><i aria-hidden="true"></i>
+      </a>
     </section>
 
-    <section id="tarifs">
-      <div class="container">
-        <div class="section-title reveal-left">
-          <h2>Tarifs fictifs</h2>
-          <p>À ajuster selon ses vrais prix. Pour la démo, ça donne déjà une page crédible.</p>
+    <section class="michael section" id="michael" aria-labelledby="michael-title">
+      <div class="shell michael__grid">
+        <div class="section-index reveal" data-reveal aria-hidden="true">01</div>
+
+        <div class="michael__visual reveal" data-reveal>
+          <div class="michael__image">
+            <img
+              src="assets/ChatGPT Image 12 juill. 2026, 07 h 28 min 50 s.png"
+              alt="Portrait professionnel de Michael Picard"
+              width="730"
+              height="754"
+              loading="lazy"
+            >
+          </div>
+          <p class="vertical-label" aria-hidden="true">Rivière-du-Loup · Québec</p>
         </div>
-        <div class="pricing">
-          <article class="card price reveal-left"><h3>45 minutes</h3><div class="amount">75$</div><small>Traitement ciblé</small></article>
-          <article class="card price reveal-zoom"><h3>60 minutes</h3><div class="amount">95$</div><small>Le classique efficace</small></article>
-          <article class="card price reveal-right"><h3>90 minutes</h3><div class="amount">135$</div><small>Récupération complète</small></article>
+
+        <div class="michael__content">
+          <p class="kicker reveal" data-reveal>Le massothérapeute</p>
+          <h2 id="michael-title" class="display-title reveal" data-reveal>
+            Une pratique qui porte un nom.<br><em>Le sien.</em>
+          </h2>
+          <p class="michael__role reveal" data-reveal>
+            Michael Picard<br>
+            <span>Massothérapie thérapeutique et athlétique</span>
+          </p>
+
+          <div class="pending-copy reveal" data-reveal>
+            <span class="pending-copy__line" aria-hidden="true"></span>
+            <div>
+              <p class="pending-copy__label">À propos de Michael</p>
+              <p class="pending-copy__text">Présentation complète à venir</p>
+              <p class="pending-copy__hint">Un portrait plus détaillé de son parcours et de sa pratique sera ajouté ici.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section>
-      <div class="container">
-        <div class="section-title reveal-left">
-          <h2>Témoignages</h2>
-          <p>Texte temporaire pour remplir la démo.</p>
+    <section class="approach section" id="approche" aria-labelledby="approach-title">
+      <div class="approach__sweep" aria-hidden="true"></div>
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <p class="kicker reveal" data-reveal>Une approche en mouvement</p>
+            <h2 id="approach-title" class="display-title reveal" data-reveal>
+              Précise. Adaptée.<br><em>Orientée vers vos objectifs.</em>
+            </h2>
+          </div>
+          <p class="section-intro reveal" data-reveal>
+            Un accompagnement ajusté à votre niveau d’activité, à vos tensions et au rythme de votre corps.
+          </p>
         </div>
-        <div class="testimonials">
-          <div class="card reveal-left"><p class="quote">“J’avais les épaules barrées depuis des semaines. Après une séance, j’ai enfin retrouvé de la mobilité.”</p><div class="author">— Marc, hockey cosom</div></div>
-          <div class="card reveal-zoom"><p class="quote">“Approche professionnelle, pression parfaite et explications claires. Pas juste un massage random.”</p><div class="author">— Julie, course à pied</div></div>
-          <div class="card reveal-right"><p class="quote">“Excellent pour la récupération après l’entraînement. Je recommande avant que le corps envoie sa lettre de démission.”</p><div class="author">— David, CrossFit</div></div>
+
+        <div class="approach__list" role="list">
+          <article class="approach__item reveal" data-reveal role="listitem">
+            <span>01</span>
+            <h3>Récupération</h3>
+            <p>Soutenir le corps avant, entre ou après vos efforts.</p>
+          </article>
+          <article class="approach__item reveal" data-reveal role="listitem">
+            <span>02</span>
+            <h3>Mobilité</h3>
+            <p>Accompagner un mouvement plus libre et plus confortable.</p>
+          </article>
+          <article class="approach__item reveal" data-reveal role="listitem">
+            <span>03</span>
+            <h3>Tensions musculaires</h3>
+            <p>Porter une attention ciblée aux zones sollicitées.</p>
+          </article>
+          <article class="approach__item reveal" data-reveal role="listitem">
+            <span>04</span>
+            <h3>Objectifs personnels</h3>
+            <p>Adapter chaque séance à votre réalité et à votre rythme.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="faq">
-      <div class="container">
-        <div class="section-title reveal-left">
-          <h2>Questions fréquentes</h2>
-          <p>Simple, direct, utile.</p>
+    <section class="certifications section" id="certifications" aria-labelledby="certifications-title">
+      <div class="shell certifications__grid">
+        <div>
+          <div class="section-index reveal" data-reveal aria-hidden="true">03</div>
+          <p class="kicker reveal" data-reveal>Parcours professionnel</p>
+          <h2 id="certifications-title" class="display-title reveal" data-reveal>Certifications</h2>
         </div>
-        <div class="faq reveal-right">
-          <details><summary>Est-ce seulement pour les sportifs?</summary><p>Non. L’approche sportive est utile pour les gens actifs, mais les soins peuvent aussi être orientés relaxation ou douleurs du quotidien.</p></details>
-          <details><summary>Est-ce que les reçus d’assurance sont disponibles?</summary><p>Oui, reçu disponible. À valider selon la couverture de ton assureur.</p></details>
-          <details><summary>Quelle durée choisir?</summary><p>45 minutes pour une zone précise, 60 minutes pour un soin complet standard, 90 minutes pour un travail plus profond.</p></details>
+
+        <div class="credentials-placeholder reveal" data-reveal>
+          <div class="credentials-placeholder__seal" aria-hidden="true">
+            <span>MP</span>
+          </div>
+          <div>
+            <p class="credentials-placeholder__status">Dossier en préparation</p>
+            <p class="credentials-placeholder__title">Informations à venir</p>
+            <p>Les certifications, formations et associations professionnelles seront présentées ici dès que l’information sera disponible.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="contact">
-      <div class="container">
-        <div class="cta reveal-zoom">
-          <h2>Prêt à réserver?</h2>
-          <p>Massothérapie MP — 123 rue de la Performance, Trois-Rivières, QC. Téléphone : 819-555-0123. Courriel : info@massotherapiemp.ca</p>
-          <a class="btn btn-primary" href="mailto:info@massotherapiemp.ca">Écrire pour réserver</a>
+    <section class="access section" id="acces" aria-labelledby="access-title">
+      <div class="shell">
+        <div class="section-heading section-heading--access">
+          <div>
+            <p class="kicker reveal" data-reveal>Votre arrivée, en images</p>
+            <h2 id="access-title" class="display-title reveal" data-reveal>Entrer. Vous repérer.<br><em>Arriver au salon.</em></h2>
+          </div>
+          <div class="address-block reveal" data-reveal>
+            <p class="address-block__label">Adresse</p>
+            <address>
+              383 Rue Lafontaine<br>
+              Rivière-du-Loup, Québec<br>
+              G5R 3B5
+            </address>
+            <a
+              class="text-link text-link--light"
+              href="https://www.google.com/maps/search/?api=1&amp;query=383%20Rue%20Lafontaine%2C%20Rivi%C3%A8re-du-Loup%2C%20Qu%C3%A9bec%20G5R%203B5"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Obtenir l’itinéraire <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+
+        <div class="access__videos">
+          <figure class="video-story video-story--entrance reveal" data-reveal>
+            <div class="video-frame">
+              <span class="video-frame__number" aria-hidden="true">01</span>
+              <video controls playsinline preload="metadata" aria-label="Vidéo montrant l'entrée extérieure du bâtiment">
+                <source src="videos/Michael Picard on Reels [1525461309612448].mp4" type="video/mp4">
+                Votre navigateur ne prend pas en charge la lecture vidéo.
+              </video>
+            </div>
+            <figcaption>
+              <span>Première étape</span>
+              <strong>L’entrée extérieure</strong>
+              <p>Repérez la porte vitrée située sous l’enseigne bleue.</p>
+            </figcaption>
+          </figure>
+
+          <div class="access__connector" aria-hidden="true">
+            <span></span><i></i><span></span>
+          </div>
+
+          <figure class="video-story video-story--inside reveal" data-reveal>
+            <div class="video-frame">
+              <span class="video-frame__number" aria-hidden="true">02</span>
+              <video controls playsinline preload="metadata" aria-label="Vidéo montrant le parcours intérieur jusqu'au salon">
+                <source src="videos/1.7K views ｜ Michael Picard on Reels [1382969080366058].mp4" type="video/mp4">
+                Votre navigateur ne prend pas en charge la lecture vidéo.
+              </video>
+            </div>
+            <figcaption>
+              <span>Deuxième étape</span>
+              <strong>Une fois à l’intérieur</strong>
+              <p>Suivez le parcours montré jusqu’à la porte du salon.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta" aria-labelledby="cta-title">
+      <div class="final-cta__lines" aria-hidden="true"></div>
+      <div class="shell final-cta__inner">
+        <p class="kicker reveal" data-reveal>Votre prochain mouvement</p>
+        <h2 id="cta-title" class="reveal" data-reveal>Prêt à soutenir<br>votre prochain <em>objectif?</em></h2>
+        <div class="booking booking--center reveal" data-reveal>
+          <button class="button button--gold button--large" type="button" disabled aria-disabled="true">
+            Réserver une séance
+          </button>
+          <span class="booking__note">Réservation en ligne bientôt disponible</span>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container footer-grid">
-      <div>© 2026 Massothérapie MP. Site démo.</div>
-      <div>Thérapeutique & Athlétique</div>
+  <footer class="site-footer">
+    <div class="shell footer__top">
+      <a class="brand brand--footer" href="#accueil" aria-label="Retour à l'accueil">
+        <span class="brand__mark" aria-hidden="true">
+          <img src="assets/hd8.png" alt="" width="3000" height="1400" loading="lazy">
+        </span>
+        <span class="brand__type">
+          <strong>Michael Picard</strong>
+          <small>Massothérapie</small>
+        </span>
+      </a>
+      <address>383 Rue Lafontaine · Rivière-du-Loup, Québec · G5R 3B5</address>
+    </div>
+
+    <div class="shell footer__bottom">
+      <p>© <span data-year>2026</span> Massothérapie Michael Picard</p>
+      <nav aria-label="Navigation du pied de page">
+        <a href="#michael">Michael</a>
+        <a href="#approche">Approche</a>
+        <a href="#acces">Nous trouver</a>
+      </nav>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
