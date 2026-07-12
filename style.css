@@ -160,14 +160,17 @@ address {
   position: relative;
   z-index: 1;
   width: min(78vw, 680px);
-  overflow: hidden;
-  clip-path: inset(0 100% 0 0);
+  max-width: calc(100% - 2rem);
+  opacity: 0;
+  transform: scale(0.96);
   animation: intro-logo 900ms 180ms var(--ease) forwards;
 }
 
 .intro__mark img {
   width: 100%;
+  max-width: 100%;
   height: auto;
+  object-fit: contain;
 }
 
 .intro p {
@@ -205,7 +208,7 @@ address {
 .intro__line--bottom { bottom: 18%; }
 
 @keyframes intro-logo {
-  to { clip-path: inset(0 0 0 0); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 @keyframes intro-subtitle {
@@ -257,49 +260,15 @@ address {
   z-index: 2;
   display: inline-flex;
   align-items: center;
-  gap: 0.65rem;
   min-width: 0;
 }
 
-.brand__mark {
-  position: relative;
+.brand__logo {
   display: block;
-  flex: 0 0 46px;
-  width: 46px;
-  height: 50px;
-  overflow: hidden;
-  background: var(--navy);
-}
-
-.brand__mark img {
-  position: absolute;
-  top: -8px;
-  left: -2px;
-  width: auto;
-  max-width: none;
-  height: 72px;
-}
-
-.brand__type {
-  display: grid;
-  line-height: 1.05;
-  text-transform: uppercase;
-}
-
-.brand__type strong {
-  color: var(--ivory);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 0.92rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-}
-
-.brand__type small {
-  margin-top: 0.28rem;
-  color: var(--gold-light);
-  font-size: 0.55rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
+  width: clamp(126px, 17vw, 175px);
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .nav-toggle {
@@ -1163,6 +1132,44 @@ address {
   margin-top: 2.8rem;
 }
 
+.facebook-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  width: fit-content;
+  color: var(--gold-light);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 220ms ease, transform 220ms var(--ease);
+}
+
+.facebook-link__icon {
+  width: 1.8rem;
+  height: 1.8rem;
+  display: grid;
+  place-items: center;
+  flex: 0 0 1.8rem;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: lowercase;
+}
+
+.facebook-link:hover,
+.facebook-link:focus-visible {
+  color: var(--ivory);
+  transform: translateY(-2px);
+}
+
+.facebook-link--cta {
+  margin-top: 1.8rem;
+}
+
 /* Footer */
 .site-footer {
   padding: 3rem 0 1.5rem;
@@ -1177,11 +1184,26 @@ address {
   gap: 1.5rem;
 }
 
-.brand--footer .brand__mark { width: 50px; flex-basis: 50px; }
+.brand--footer .brand__logo {
+  width: min(220px, 70vw);
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.footer__contact {
+  display: grid;
+  justify-items: start;
+  gap: 1rem;
+}
 
 .footer__top address {
   color: var(--muted);
   font-size: 0.8rem;
+}
+
+.facebook-link--footer {
+  color: var(--gold-light);
 }
 
 .footer__bottom {
@@ -1240,6 +1262,7 @@ address {
   .footer__top,
   .footer__bottom { flex-direction: row; align-items: center; justify-content: space-between; }
   .footer__top address { max-width: 32rem; text-align: right; }
+  .footer__contact { justify-items: end; }
 }
 
 @media (min-width: 940px) {
@@ -1332,7 +1355,8 @@ address {
 }
 
 @media (max-width: 420px) {
-  .brand__type strong { font-size: 0.8rem; }
+  .brand__logo { width: 118px; }
+  .brand--footer .brand__logo { width: min(200px, 76vw); }
   .hero__title { font-size: clamp(2.95rem, 15vw, 4rem); }
   .title-mask--offset { padding-left: 0.45em; }
   .hero__portrait-wrap { width: calc(100% - 0.4rem); }
