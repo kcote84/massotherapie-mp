@@ -62,31 +62,6 @@
     revealElements.forEach((element) => revealObserver.observe(element));
   }
 
-  const parallaxElement = document.querySelector('[data-parallax]');
-  let parallaxFrame = null;
-
-  const updateParallax = () => {
-    parallaxFrame = null;
-    if (!parallaxElement || reducedMotion.matches || window.innerWidth < 900) return;
-
-    const shift = Math.min(window.scrollY * 0.055, 34);
-    parallaxElement.style.setProperty('--portrait-shift', `${shift}px`);
-  };
-
-  window.addEventListener('scroll', () => {
-    if (parallaxFrame === null) {
-      parallaxFrame = window.requestAnimationFrame(updateParallax);
-    }
-  }, { passive: true });
-
-  reducedMotion.addEventListener?.('change', () => {
-    if (reducedMotion.matches && parallaxElement) {
-      parallaxElement.style.removeProperty('--portrait-shift');
-    } else {
-      updateParallax();
-    }
-  });
-
   document.querySelectorAll('video').forEach((video) => {
     video.addEventListener('play', () => {
       document.querySelectorAll('video').forEach((otherVideo) => {
@@ -110,8 +85,5 @@
 
   window.addEventListener('resize', () => {
     if (window.innerWidth >= 1080) setMenuState(false);
-    updateParallax();
   });
-
-  updateParallax();
 })();
