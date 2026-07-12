@@ -129,7 +129,7 @@ address {
   display: grid;
   place-content: center;
   justify-items: center;
-  gap: 1.25rem;
+  padding: clamp(1.5rem, 5vw, 4rem);
   overflow: hidden;
   background: var(--navy);
   pointer-events: none;
@@ -159,8 +159,8 @@ address {
 .intro__mark {
   position: relative;
   z-index: 1;
-  width: min(78vw, 680px);
-  max-width: calc(100% - 2rem);
+  width: min(84vw, 720px);
+  max-width: 100%;
   opacity: 0;
   transform: scale(0.96);
   animation: intro-logo 900ms 180ms var(--ease) forwards;
@@ -173,27 +173,6 @@ address {
   object-fit: contain;
 }
 
-.intro p {
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-  margin: 0;
-  color: var(--gold-light);
-  font-size: clamp(0.62rem, 1.5vw, 0.78rem);
-  font-weight: 700;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  opacity: 0;
-  animation: intro-subtitle 650ms 720ms ease forwards;
-}
-
-.intro p span {
-  width: 2rem;
-  height: 1px;
-  background: currentColor;
-}
-
 .intro__line {
   position: absolute;
   left: 0;
@@ -204,15 +183,11 @@ address {
   animation: line-draw 1.1s 250ms var(--ease) forwards;
 }
 
-.intro__line--top { top: 18%; }
-.intro__line--bottom { bottom: 18%; }
+.intro__line--top { top: 22%; }
+.intro__line--bottom { bottom: 22%; }
 
 @keyframes intro-logo {
   to { opacity: 1; transform: scale(1); }
-}
-
-@keyframes intro-subtitle {
-  to { opacity: 1; }
 }
 
 @keyframes line-draw {
