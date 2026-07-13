@@ -1088,9 +1088,6 @@ address {
 }
 
 .footer__bottom {
-  margin-top: 2.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--line-light);
   color: #7f8b98;
   font-size: 0.72rem;
 }
