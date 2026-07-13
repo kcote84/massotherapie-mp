@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/fraunces-latin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Fraunces";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/fraunces-latin-italic.woff2") format("woff2");
+}
+
 :root {
   --navy: #172b44;
   --navy-deep: #0d1c2d;
@@ -136,7 +152,8 @@ address {
   animation: intro-away 2.35s var(--ease) forwards;
 }
 
-.no-js .intro {
+.no-js .intro,
+.intro-seen .intro {
   display: none;
 }
 
@@ -300,7 +317,7 @@ address {
   width: 100%;
   padding: 0.5rem 0;
   color: var(--ivory);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
   font-size: clamp(2rem, 10vw, 4rem);
   line-height: 1.1;
 }
@@ -369,10 +386,11 @@ address {
 .display-title {
   margin: 0;
   color: var(--ivory);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
   font-size: clamp(2.5rem, 9.5vw, 6.4rem);
   font-weight: 400;
-  letter-spacing: -0.045em;
+  letter-spacing: -0.028em;
+  word-spacing: 0.09em;
   line-height: 0.98;
 }
 
@@ -407,7 +425,10 @@ address {
 .button:disabled,
 .button[aria-disabled="true"] {
   cursor: not-allowed;
-  filter: saturate(0.78);
+  border-color: rgba(195, 165, 102, 0.5);
+  background: rgba(195, 165, 102, 0.14);
+  color: var(--gold-light);
+  box-shadow: none;
 }
 
 .button:disabled:hover { transform: none; }
@@ -496,11 +517,12 @@ address {
 .hero__title {
   margin: 0;
   color: var(--ivory);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
   font-size: clamp(3.25rem, 15vw, 7.8rem);
   font-weight: 400;
-  letter-spacing: -0.06em;
-  line-height: 0.82;
+  letter-spacing: -0.038em;
+  word-spacing: 0.09em;
+  line-height: 0.84;
 }
 
 .title-mask {
@@ -615,7 +637,7 @@ address {
   margin: 0;
   transform: translate(-50%, -54%);
   color: transparent;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
   font-size: clamp(9rem, 35vw, 18rem);
   line-height: 1;
   letter-spacing: -0.12em;
@@ -661,6 +683,7 @@ address {
 /* Michael */
 .michael {
   overflow: hidden;
+  padding-block-end: clamp(7rem, 14vw, 12.5rem);
   background: var(--paper);
   color: var(--ink);
 }
@@ -669,10 +692,10 @@ address {
   content: "MICHAEL";
   position: absolute;
   right: -0.08em;
-  bottom: -0.32em;
+  bottom: -0.34em;
   color: transparent;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(7rem, 23vw, 19rem);
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  font-size: clamp(6rem, 20vw, 16rem);
   line-height: 1;
   -webkit-text-stroke: 1px rgba(23, 43, 68, 0.08);
   pointer-events: none;
@@ -691,7 +714,7 @@ address {
 }
 
 .michael__image {
-  aspect-ratio: 1234 / 1275;
+  aspect-ratio: 1088 / 1107;
   overflow: hidden;
   background: #bcae99;
   clip-path: polygon(0 0, 92% 0, 100% 9%, 100% 100%, 0 100%);
@@ -724,7 +747,7 @@ address {
 .michael__role {
   margin: 1.8rem 0 0;
   color: var(--ink);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
   font-size: 1.3rem;
   line-height: 1.35;
 }
@@ -758,7 +781,7 @@ address {
 .about-copy__body { max-width: 36rem; margin-top: 1rem; }
 .about-copy__body p { color: var(--paper-muted); font-size: 0.96rem; line-height: 1.72; }
 .about-copy__body p + p { margin-top: 0.85rem; }
-.about-copy__body p:last-child { color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-size: 1.08rem; }
+.about-copy__body p:last-child { color: var(--ink); font-family: "Fraunces", Georgia, "Times New Roman", serif; font-size: 1.08rem; }
 
 .section-heading {
   position: relative;
@@ -770,6 +793,7 @@ address {
 
 /* Certifications */
 .certifications {
+  padding-block: clamp(4.5rem, 9vw, 7rem);
   background: var(--navy-deep);
 }
 
@@ -817,7 +841,7 @@ address {
   border: 1px solid var(--gold);
   border-radius: 50%;
   color: var(--gold-light);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
   font-size: 1.4rem;
 }
 
@@ -833,7 +857,7 @@ address {
 .credentials p { margin: 0; }
 .credentials__status { color: var(--gold); font-size: 0.68rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; }
 .credentials__list { display: grid; gap: 0.65rem; margin: 1rem 0 0; padding: 0; list-style: none; }
-.credentials__list li { position: relative; padding-left: 1.4rem; color: var(--ivory); font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.45rem, 4vw, 2rem); line-height: 1.25; }
+.credentials__list li { position: relative; padding-left: 1.4rem; color: var(--ivory); font-family: "Fraunces", Georgia, "Times New Roman", serif; font-size: clamp(1.45rem, 4vw, 2rem); line-height: 1.25; }
 .credentials__list li::before { content: ""; position: absolute; top: 0.58em; left: 0; width: 0.45rem; height: 1px; background: var(--gold); }
 .credentials__note { max-width: 36rem; margin-top: 1.35rem !important; padding-top: 1rem; border-top: 1px solid var(--line-light); color: var(--muted); font-size: 0.88rem; }
 
@@ -864,7 +888,7 @@ address {
 
 .address-block address {
   margin-bottom: 1rem;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
   font-size: 1.1rem;
   line-height: 1.5;
 }
@@ -921,7 +945,7 @@ address {
 .video-story figcaption strong {
   display: block;
   margin-top: 0.2rem;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
   font-size: clamp(1.55rem, 5vw, 2.2rem);
   font-weight: 400;
 }
@@ -988,11 +1012,12 @@ address {
 
 .final-cta h2 {
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
   font-size: clamp(3rem, 11vw, 7.8rem);
   font-weight: 400;
-  letter-spacing: -0.055em;
-  line-height: 0.9;
+  letter-spacing: -0.035em;
+  word-spacing: 0.09em;
+  line-height: 0.92;
 }
 
 .final-cta__text {
@@ -1088,6 +1113,9 @@ address {
 }
 
 .footer__bottom {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line-light);
   color: #7f8b98;
   font-size: 0.72rem;
 }
@@ -1219,6 +1247,10 @@ address {
   .michael__grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(3rem, 6vw, 7rem); }
   .michael__content { grid-column: 2; grid-row: 1; padding-right: 2rem; }
   .section-heading--access { grid-template-columns: 1.4fr 0.6fr; }
+}
+
+@media (min-width: 1080px) and (max-height: 860px) {
+  .scroll-cue { display: none; }
 }
 
 @media (max-width: 420px) {
