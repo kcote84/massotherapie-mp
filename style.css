@@ -1121,9 +1121,11 @@ address {
 }
 
 .footer__bottom p { margin: 0; }
+.footer__legal { display: grid; gap: 0.35rem; }
 .footer__bottom nav { display: flex; flex-wrap: wrap; gap: 1.2rem; }
 .footer__bottom a { transition: color 180ms ease; }
 .footer__bottom a:hover { color: var(--gold-light); }
+.footer__credit-brand { color: var(--gold-light); }
 
 /* Progressive motion */
 .js [data-reveal] {
